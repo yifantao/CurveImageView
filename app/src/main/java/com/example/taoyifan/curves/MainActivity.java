@@ -14,13 +14,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final AnimatorSet set = new AnimatorSet();
         final View cv = findViewById(R.id.cv);
-        ObjectAnimator animator1 = ObjectAnimator.ofFloat(cv, "angle", 1, 60)
+        ObjectAnimator animator1 = ObjectAnimator.ofFloat(cv, "angle", 1, 120)
                 .setDuration(3000);
         ObjectAnimator animator2 = ObjectAnimator.ofFloat(cv, "rotateY", 0, 360)
                 .setDuration(3000);
         ObjectAnimator animator3 = ObjectAnimator.ofFloat(cv, "angle", 60, 1)
                 .setDuration(3000);
-        set.play(animator3).after(animator2);
+//        set.play(animator3).after(animator2);
         set.play(animator2).after(animator1);
         set.start();
 
