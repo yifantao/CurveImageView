@@ -85,7 +85,7 @@ public class CurveImageView extends ImageView {
         invalidate();
     }
 
-    public void init() {
+    public void initMesh() {
         mRadius = mBitmap.getWidth() / (2 * Math.sin(mAngle / 2 * Math.PI / 180));
 
         int index = 0;
@@ -124,7 +124,7 @@ public class CurveImageView extends ImageView {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        init();
+        initMesh();
         canvas.save();
         canvas.translate(NEED_PADDING / 2, NEED_PADDING / 2);
         canvas.translate(getWidth() / 2, getHeight() / 2);
